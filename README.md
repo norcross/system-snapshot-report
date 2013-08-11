@@ -1,4 +1,6 @@
-reaktiv-audit
+Reaktiv Audit Report
 =============
 
-A plugin to grab a site info report for audit purposes.
+## Description ##
+
+This is related to the site audits done by Reaktiv Studios. This provided a snapshot report.
