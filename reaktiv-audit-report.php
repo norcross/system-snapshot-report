@@ -27,12 +27,20 @@ Author URI: http://reaktivstudios.com
 	if ( ! defined( 'RKRP_PLUGIN_DIR' ) )
 		define( 'RKRP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-// Start up the engine
+	/**
+	 * Start up the engine
+	 * Reaktiv_Audit_Report class.
+	 */
 class Reaktiv_Audit_Report
 {
 	/**
 	 * Static property to hold our singleton instance
-	 * @var Reaktiv_Audit_Report
+	 *
+	 * (default value: false)
+	 *
+	 * @var bool
+	 * @access public
+	 * @static
 	 */
 	static $instance = false;
 
@@ -40,7 +48,8 @@ class Reaktiv_Audit_Report
 	 * This is our constructor, which is private to force the use of
 	 * getInstance() to make this a Singleton
 	 *
-	 * @return Reaktiv_Audit_Report
+	 * @access private
+	 * @return void
 	 */
 	private function __construct() {
 		add_action      ( 'plugins_loaded',                     array( $this, 'textdomain'              )			);
@@ -54,9 +63,10 @@ class Reaktiv_Audit_Report
 	 * If an instance exists, this returns it.  If not, it creates one and
 	 * retuns it.
 	 *
-	 * @return Reaktiv_Audit_Report
+	 * @access public
+	 * @static
+	 * @return void
 	 */
-
 	public static function getInstance() {
 		if ( !self::$instance )
 			self::$instance = new self;
@@ -67,10 +77,9 @@ class Reaktiv_Audit_Report
 	/**
 	 * load textdomain
 	 *
-	 * @return Reaktiv_Audit_Report
+	 * @access public
+	 * @return void
 	 */
-
-
 	public function textdomain() {
 
 		load_plugin_textdomain( 'rkrp', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -80,9 +89,9 @@ class Reaktiv_Audit_Report
 	/**
 	 * Scripts and stylesheets
 	 *
-	 * @return Reaktiv_Audit_Report
+	 * @access public
+	 * @return void
 	 */
-
 	public function scripts_styles() {
 
 		$current_screen = get_current_screen();
@@ -97,9 +106,10 @@ class Reaktiv_Audit_Report
 	/**
 	 * helper function for number conversions
 	 *
-	 * @return Reaktiv_Audit_Report
+	 * @access public
+	 * @param mixed $v
+	 * @return void
 	 */
-
 	public function num_convt( $v ) {
 		$l   = substr( $v, -1 );
 		$ret = substr( $v, 0, -1 );
@@ -122,9 +132,9 @@ class Reaktiv_Audit_Report
 	/**
 	 * build out settings page and meta boxes
 	 *
-	 * @return Reaktiv_Audit_Report
+	 * @access public
+	 * @return void
 	 */
-
 	public function menu_item() {
 		add_management_page( __('Reaktiv Audit Report', 'rkrp'), __('Audit Report', 'rkrp'), 'manage_options', 'reaktiv-audit', array( $this, 'audit_report' ) );
 
@@ -134,9 +144,9 @@ class Reaktiv_Audit_Report
 	/**
 	 * Display audit stuff
 	 *
-	 * @return Reaktiv_Audit_Report
+	 * @access public
+	 * @return void
 	 */
-
 	public function audit_report() {
 		if (!current_user_can('manage_options') )
 			return;
@@ -146,6 +156,14 @@ class Reaktiv_Audit_Report
 		if ( ! class_exists( 'Browser' ) )
 			require_once RKRP_PLUGIN_DIR . 'lib/browser.php';
 
+		/**
+		 * Browser
+		 *
+		 * (default value: new Browser())
+		 *
+		 * @var mixed
+		 * @access public
+		 */
 		$browser = new Browser();
 		if ( get_bloginfo( 'version' ) < '3.4' ) {
 			$theme_data = get_theme_data( get_stylesheet_directory() . '/style.css' );
@@ -305,9 +323,9 @@ endif;
 	/**
 	 * generate audit text file
 	 *
-	 * @return Reaktiv_Audit_Report
+	 * @access public
+	 * @return void
 	 */
-
 	public function audit_download() {
 
 		if ( !isset( $_POST['reaktiv-action'] ) )
@@ -334,8 +352,6 @@ endif;
 
 /// end class
 }
-
-
 
 // Instantiate our class
 $Reaktiv_Audit_Report = Reaktiv_Audit_Report::getInstance();
