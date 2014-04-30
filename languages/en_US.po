@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: system-snapshot-report\n"
+"POT-Creation-Date: 2014-04-30 13:30-0500\n"
+"PO-Revision-Date: 2014-04-30 13:30-0500\n"
+"Last-Translator: Andrew Norcross <andrew@andrewnorcross.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: lib\n"
+
+#: system-snapshot-report.php:145
+msgid "System Snapshot Report"
+msgstr ""
+
+#: system-snapshot-report.php:145
+msgid "Snapshot"
+msgstr ""
+
+#: system-snapshot-report.php:165
+msgid "System Snapshot Report "
+msgstr ""
+
+#: system-snapshot-report.php:167
+msgid "Either copy + paste the info below or click the download button"
+msgstr ""
+
+#: system-snapshot-report.php:173 system-snapshot-report.php:181
+#, fuzzy
+msgid "Save Snapshot File"
+msgstr "Save Changes"
+
+#: system-snapshot-report.php:174 system-snapshot-report.php:182
+#, fuzzy
+msgid "Highlight Data"
+msgstr "View Data File URL"
+
+#: system-snapshot-report.php:230 system-snapshot-report.php:231
+msgid "Yes"
+msgstr ""
+
+#: system-snapshot-report.php:230 system-snapshot-report.php:231
+msgid "No"
+msgstr ""
+
+#: system-snapshot-report.php:232 system-snapshot-report.php:240
+msgid "Enabled"
+msgstr ""
+
+#: system-snapshot-report.php:232 system-snapshot-report.php:240
+msgid "Disabled"
+msgstr ""
+
+#: system-snapshot-report.php:232
+#, fuzzy
+msgid "Not Set"
+msgstr "The description is set below the header area."
+
+#: system-snapshot-report.php:233
+msgid "Acceptable"
+msgstr ""
+
+#: system-snapshot-report.php:233
+msgid "Too Long"
+msgstr ""
+
+#: system-snapshot-report.php:234 system-snapshot-report.php:235
+#: system-snapshot-report.php:238
+msgid "n/a"
+msgstr ""
+
+#: system-snapshot-report.php:236 system-snapshot-report.php:241
+#: system-snapshot-report.php:242
+msgid "On"
+msgstr ""
+
+#: system-snapshot-report.php:236 system-snapshot-report.php:241
+#: system-snapshot-report.php:242
+msgid "Off"
+msgstr ""
+
+#: system-snapshot-report.php:243
+msgid "Your server supports fsockopen."
+msgstr ""
+
+#: system-snapshot-report.php:243
+msgid "Your server does not support fsockopen."
+msgstr ""
+
+#: system-snapshot-report.php:244
+msgid "Your server supports cURL."
+msgstr ""
+
+#: system-snapshot-report.php:244
+msgid "Your server does not support cURL."
+msgstr ""
+
+#: system-snapshot-report.php:245
+msgid "Your server has the SOAP Client enabled."
+msgstr ""
+
+#: system-snapshot-report.php:245
+msgid "Your server does not have the SOAP Client enabled."
+msgstr ""
+
+#: system-snapshot-report.php:246
+msgid "Your server has SUHOSIN installed."
+msgstr ""
+
+#: system-snapshot-report.php:246
+msgid "Your server does not have SUHOSIN installed."
+msgstr ""
+
+#: system-snapshot-report.php:247
+msgid "Your server has OpenSSL installed."
+msgstr ""
+
+#: system-snapshot-report.php:247
+msgid "Your server does not have OpenSSL installed."
+msgstr ""
+
+#: system-snapshot-report.php:402
+msgid "Report Generated: "
+msgstr ""
+
+#: system-snapshot-report.php:438
+#, php-format
+msgid ""
+"This plugin brought to you by the fine folks at <a href=\"%1$s\" title=\"%2$s"
+"\" target=\"_blank\">Reaktiv Studios</a>"
+msgstr ""

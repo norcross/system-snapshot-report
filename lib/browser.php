@@ -1,5 +1,9 @@
 <?php
 	/**
+	 * Modified to display user string better
+	 * Andrew Norcross on 08/18/2013
+	 * Changes: Changes return
+	 *
 	 * Modified to remove var
 	 * Chris Christoff on 12/26/2012
 	 * Changes: Changes vars to publics
@@ -346,26 +350,15 @@
 		* @return string formatted string with a summary of the browser
 		*/
 		function __toString() {
-		$text1   = $this->getUserAgent(); //grabs the UA (user agent) string
-		$UAline1 = substr($text1, 0, 32); //the first line we print should only be the first 32 characters of the UA string
-		$text2       = $this->getUserAgent();//now we grab it again and save it to a string
-		$towrapUA    = str_replace($UAline1, '', $text2);//the rest of the printoff (other than first line) is equivolent
-		// To the whole string minus the part we printed off. IE
-		// User Agent:      thefirst32charactersfromUAline1
-		//                  the rest of it is now stored in
-		//                  $text2 to be printed off
-		// But we need to add spaces before each line that is split other than line 1
-		$space = '';
-		for($i = 0; $i < 25; $i++) {
-		$space .= ' ';
-		}
-		// Now we split the remaining string of UA ($text2) into lines that are prefixed by spaces for formatting
-		$wordwrapped = chunk_split($towrapUA, 32, "\n $space");
-			return "Platform:                 {$this->getPlatform()} \n".
-				   "Browser Name:             {$this->getBrowser()}  \n" .
-			       "Browser Version:          {$this->getVersion()} \n" .
-			       "User Agent String:        $UAline1 \n\t\t\t  " .
-				   "$wordwrapped";
+
+			$output	= '';
+			$output	.= 'Platform:'."\t\t\t\t".$this->getPlatform()."\n";
+			$output	.= 'Browser Name:'."\t\t\t\t".$this->getBrowser()."\n";
+			$output	.= 'Browser Vers:'."\t\t\t\t".$this->getVersion()."\n";
+			$output	.= 'UA String:'."\t\t\t\t".$this->getUserAgent()."\n";
+
+			return $output;
+
 		}
 		/**
 		 * Protected routine to calculate and determine what the browser is in use (including platform)
