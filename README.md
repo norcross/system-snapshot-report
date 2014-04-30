@@ -5,11 +5,11 @@
 
 **Donate link:** http://andrewnorcross.com/donate
 
-**Requires at least:** 3.7
+**Requires at least:** 3.3
 
 **Tested up to:** 3.9
 
-**Stable tag:** 1.0.0
+**Stable tag:** 1.0.1
 
 **License:** GPLv2 or later
 
