@@ -295,7 +295,7 @@ class System_Snapshot_Report
 		$report	.= "\n\t".'** SERVER DATA **'."\n";
 		$report	.= 'jQuery Version'."\t\t\t\t".$jquchk."\n";
 		$report	.= 'PHP Version:'."\t\t\t\t".PHP_VERSION."\n";
-		$report	.= 'MySQL Version:'."\t\t\t\t".mysql_get_server_info()."\n";
+		$report	.= 'MySQL Version:'."\t\t\t\t".$wpdb->db_version()."\n";
 		$report	.= 'Server Software:'."\t\t\t".$_SERVER['SERVER_SOFTWARE']."\n";
 
 		$report	.= "\n\t".'** PHP CONFIGURATION **'."\n";
