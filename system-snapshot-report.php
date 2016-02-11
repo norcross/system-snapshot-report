@@ -336,7 +336,8 @@ class System_Snapshot_Report
 			$report .= 'Network Active Plugins: ('.count( $nt_plugins ).')'. "\n";
 
 			foreach ( $nt_plugins as $plugin_path ) :
-				if ( array_key_exists( $plugin_base, $nt_plugins ) )
+
+				if ( array_key_exists( $plugin_path, $nt_plugins ) )
 					continue;
 
 				$plugin = get_plugin_data( $plugin_path );
